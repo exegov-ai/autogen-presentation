@@ -63,7 +63,8 @@ player = ConversableAgent(
     name="player",
     system_message=
     "You play monster of the week role-playing game. Your character is orc barbarian. \
-    You don't remember your name.\
+    You don't remember your name, \
+    you have to make it up in your first message after game master introduces you to game.\
     You have big stone axe with you.",
     llm_config=llm_config,
     human_input_mode="NEVER",
@@ -87,7 +88,10 @@ game_master = ConversableAgent(
 
 chat_result = game_master.initiate_chat(
     recipient=player, 
-    message="You wake up inside volcano and see a big stone axe next to you. What do you do?",
+    message="You wake up inside volcano and see a big stone axe next to you.\
+        A tooth fairy flies near you and says: 'Hello! What is your name?'\
+        I just found your tooth under the volcanic rock. \
+        What do you do?",
     max_turns=2,
 )
 
