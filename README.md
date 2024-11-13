@@ -19,15 +19,15 @@
 2. Create a virtual environment:
 
     ```sh
-    conda create --name autogen-presentation python=3.8
-    conda activate autogen-presentation
+    conda create --name autogenstudio python=3.11.10
+    conda activate autogenstudio
     ```
 
     Using `venv`:
 
     ```sh
-    python -m venv autogen-presentation
-    source autogen-presentation
+    python -m venv autogenstudio
+    source autogenstudio
     ```
 3. Install the required packages:
 
