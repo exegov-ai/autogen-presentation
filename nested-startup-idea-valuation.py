@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Nested roadmap creation for a new startup
+# Nested idea valuation creation for a new startup
 # ## Setup
 
 # In[]:
