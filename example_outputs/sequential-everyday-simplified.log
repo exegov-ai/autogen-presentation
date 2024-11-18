@@ -1,0 +1,102 @@
+flaml.automl is not available. Please install flaml[automl] to enable AutoML functionalities.
+/home/johnnie/miniconda3/envs/autogenstudio/lib/python3.11/site-packages/autogen/agentchat/chat.py:47: UserWarning: Repetitive recipients detected: The chat history will be cleared by default if a recipient appears more than once. To retain the chat history, please set 'clear_history=False' in the configuration of the repeating agent.
+  warnings.warn(
+
+********************************************************************************
+Starting a new chat....
+
+********************************************************************************
+Everyday Assistant Agent (to customer_proxy_agent):
+
+Could you also remind me name, stage, and industry we are in?
+
+--------------------------------------------------------------------------------
+Provide feedback to Everyday Assistant Agent. Press enter to skip and use auto-reply, or type 'exit' to end the conversation: Company name is Satalana stage is post mvp, we are selling Sahara dessert sand online to garden decoration companies
+customer_proxy_agent (to Everyday Assistant Agent):
+
+Company name is Satalana stage is post mvp, we are selling Sahara dessert sand online to garden decoration companies
+
+--------------------------------------------------------------------------------
+Everyday Assistant Agent (to customer_proxy_agent):
+
+Thank you for that information! Could you please share your current OKRs (Objectives Key Results) and any current priorities? Also, are we aligned with the roadmap?
+
+--------------------------------------------------------------------------------
+Provide feedback to Everyday Assistant Agent. Press enter to skip and use auto-reply, or type 'exit' to end the conversation: yes current objective is to raise from 3 kg of sand sold every week to 1000kg                                                                        
+customer_proxy_agent (to Everyday Assistant Agent):
+
+yes current objective is to raise from 3 kg of sand so
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
+Starting a new chat....
+
+********************************************************************************
+Strategy Agent (to customer_proxy_agent):
+
+Hi, could you provide me some updates how business is going?Shall we update our strategy?
+Context: 
+```json
+{
+  "name": "Satalana",
+  "stage": "post MVP",
+  "industry": "e-commerce (garden decoration)"
+}
+```
+
+--------------------------------------------------------------------------------
+Provide feedback to Strategy Agent. Press enter to skip and use auto-reply, or type 'exit' to end the conversation: Yes I want to update competition analysis
+customer_proxy_agent (to Strategy Agent):
+
+Yes I want to update competition analysis
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
+Starting a new chat....
+
+********************************************************************************
+customer_proxy_agent (to Domains Agent):
+
+Let's take a look at other domains
+Context: 
+```json
+{
+  "name": "Satalana",
+  "stage": "post MVP",
+  "industry": "e-commerce (garden decoration)"
+}
+```
+Satalana, as a post-MVP e-commerce business in garden decoration, should consider updating its strategy based on recent competition analysis to enhance its market positioning and respond to changing industry dynamics.
+
+--------------------------------------------------------------------------------
+Domains Agent (to customer_proxy_agent):
+
+That sounds like a crucial step for Satalana! Evaluating and updating the strategy is essential to stay competitive, especially in the dynamic e-commerce space. Which strategic subcategory would you like to dive into? 
+
+We have options like Business Plan, OKRs, Roadmap, Lean Canvas, or the 5 Porter Forces. Let’s get started!
+
+--------------------------------------------------------------------------------
+```json
+{
+  "name": "Satalana",
+  "stage": "post MVP",
+  "industry": "e-commerce (garden decoration)"
+}
+```
+
+
+Satalana, as a post-MVP e-commerce business in garden decoration, should consider updating its strategy based on recent competition analysis to enhance its market positioning and respond to changing industry dynamics.
+
+
+Satalana should update its strategy based on recent competition analysis to enhance market positioning and respond to changes in the e-commerce garden decoration industry.
+
+
+{'usage_including_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 267, 'completion_tokens': 67, 'total_tokens': 334}}, 'usage_excluding_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 267, 'completion_tokens': 67, 'total_tokens': 334}}}
+
+
+{'usage_including_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 95, 'completion_tokens': 38, 'total_tokens': 133}}, 'usage_excluding_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 95, 'completion_tokens': 38, 'total_tokens': 133}}}
+
+
+{'usage_including_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 383, 'completion_tokens': 99, 'total_tokens': 482}}, 'usage_excluding_cached_inference': {'total_cost': 0, 'gpt-4o-mini': {'cost': 0, 'prompt_tokens': 383, 'completion_tokens': 99, 'total_tokens': 482}}}
