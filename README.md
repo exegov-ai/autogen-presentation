@@ -60,7 +60,7 @@ Autogen allows both Open AI models and Azure Open AI as well as [custom models t
 
 # Running Examples
 
-## 2Agents RPG
+## 2Agents RPG 🤖🎲🤖
 
 In this example 2 agents play role playing game. One agent is the player and the other is the game master.
 
@@ -68,7 +68,7 @@ In this example 2 agents play role playing game. One agent is the player and the
 python 2agents-rpg.py
 ```
 
-## Sequential Everyday chat
+## Sequential Everyday chat 👤💬➡️📝➡️📊➡️🌐➡️👤
 
 This example assumes that user has some data about their company and wants to update their business strategy. User talks to the AI about the company and then agents are summoned in sequential way to collect requirements.
 
@@ -76,7 +76,7 @@ This example assumes that user has some data about their company and wants to up
 python sequential-everyday-chat.py
 ```
 
-## Nested Startup Idea Valuation
+## Nested Startup Idea Valuation 💡➡️🤖➡️👨‍👩‍👧‍👦
 
 In this example first agent receives a task which is very early stage blurry description of startup.
 Then the agent takes the idea to multiple other specialized agents to get feedback on the idea.

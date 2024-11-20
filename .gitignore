@@ -1,4 +1,5 @@
 model_gpt-4o-mini.json
 .env
 .cache/
+.cache/*
 __pycache__/
