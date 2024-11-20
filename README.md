@@ -1,4 +1,6 @@
-# 2Agents RPG Setup
+# GenAI Cracow #9 Autogen Conversation Patterns
+
+This is presentation repository for [GenAI Cracow #9 meetup on 2024/11/25](https://lu.ma/67h2lt7k?tk=DtPGDy).
 
 ## Prerequisites
 
@@ -6,7 +8,7 @@
 - `pip` (Python package installer)
 
 ### Optional
-- `conda` (Anaconda package manager - recommended by [Autogen Studio team](https://autogen-studio.com/autogen-studio-ui) however only some examples in this repo were created using it)
+- `conda` (Anaconda package manager - recommended by [Autogen Studio team](https://autogen-studio.com/autogen-studio-ui) however only some examples in this repo don't require this ui)
 
 ## Installation
 
