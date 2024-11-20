@@ -1,0 +1,1 @@
+{"user_id":"guestuser@gmail.com","version":"0.0.1","model":"gemma2","base_url":"http://localhost:11434/v1/","api_type":"open_ai","api_version":null,"description":"Local running gemma2"}

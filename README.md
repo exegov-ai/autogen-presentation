@@ -85,3 +85,35 @@ Then prepare some roadmap for the idea.
 ```sh
 python nested-startup-idea-valuation.py
 ```
+
+## Group Networking 👤💬🤖💬👥🤖💬🤖💬👥🤖💬
+
+Imagine being in discord channel, this is a simulation of group networking where agents are talking to each other and to the user.
+The user is admin of chat, there's also moderator agent, newsman agent that uses function calling to fetch news from rss feeds, 2 agents that are interested in certain topics and one that just tries to troll other chat members.
+
+# Running with local model
+
+In the example local ran gemma2 ran using ollama was used and config is provided in `model_gemma2.json` file.
+
+
+## IMPORTANT Note, gemma2 model cannot call functions, so not all examples will work with it.
+
+## Installation of ollama and gemma2 (or any other open source model you wish)
+
+Instal ollama locally
+
+```sh
+curl -fsSL https://ollama.com/install.sh | sh\n
+```
+
+Pull gemma2 model (or if you want to play with different model, pull the one you with to use from ollama directory).
+
+```sh
+ollama pull gemma2
+```
+
+Test if it works with curl (or import it to postman or whatever is your favourite tool for rest apis).
+
+```sh
+curl http://localhost:11434/v1/chat/completions \\n    -H "Content-Type: application/json" \\n    -d '{\n        "model": "gemma2",\n        "messages": [\n            {\n                "role": "system",\n                "content": "You are a helpful assistant."\n            },\n            {\n                "role": "user",\n                "content": "Hello!"\n            }\n        ]\n    }'\n
+```
