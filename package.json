@@ -1,0 +1,16 @@
+{
+    "name": "autogen-presentation",
+    "version": "1.0.0",
+    "main": "presentation.md",
+    "scripts": {
+      "start": "marp -p ./presentation.md",
+      "build": "marp ./presentation.md -o index.html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+      "@marp-team/marp-cli": "^4.0.0"
+    }
+  }
