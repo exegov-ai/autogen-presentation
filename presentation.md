@@ -37,3 +37,16 @@ You can experiment with multi agent system on your laptop.
 You don't need to pay for any external APIs.
 You don't need to pay for any cloud services.
 Some models consume surprisingly low amount of resources (for example gemma2).
+
+---
+
+# QR Code to repo used during live coding
+
+<div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+">
+  <img src="images/qr-repo.svg" width="400" height="400" alt="QR Code to repository">
+</div>
