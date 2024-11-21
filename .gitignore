@@ -3,3 +3,4 @@ model_gpt-4o-mini.json
 .cache/
 .cache/*
 __pycache__/
+node_modules/
