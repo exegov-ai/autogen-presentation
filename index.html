@@ -14,9 +14,15 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" lang="en-US">
 <h1 id="autogen-and-ag2">Autogen and ag2</h1>
-<p>Autogen statred as open source project by microsoft, hosted as <a href="https://github.com/microsoft/autogen">microsoft/autogen</a> but now Autogen2 is separate organization called <a href="https://github.com/ag2ai/ag2">ag2</a>. Python package is pyauthogen or simply ag2.</p>
+<p>Autogen statred as open source project by microsoft, hosted as <a href="https://github.com/microsoft/autogen">microsoft/autogen</a> but now Autogen2 is separate organization called <a href="https://github.com/ag2ai/ag2">ag2ai</a>. Python package is pyauthogen or simply ag2.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" lang="en-US">
+<h1 id="what-makes-ag2-stand-out-compared-to-other-multi-agent-frameworks">What makes ag2 stand out compared to other multi agent frameworks?</h1>
+<p>Compared to Prompt Flow AutoGen emphasizes Agents communicate by sending and receiving messages, enabling intricate interactions.<br />
+PromptFlow is designed <a href="https://microsoft.github.io/promptflow/">link LLMs, prompts, Python code and other tools together in a executable workflow</a></p>
+<p>LangChain is focused on component Chaining: Focuses on building applications by chaining together components like prompts, LLMs, and tools.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" lang="en-US">
 <h1 id="some-of-coolest-features">Some of coolest features</h1>
 <ul>
 <li>
@@ -30,19 +36,19 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" lang="en-US">
 <h1 id="multi-agent-and-multimodel">Multi agent and multimodel</h1>
 <p>Autogen was started in Microsoft, but it's open source.<br />
 Documentation of ag2 provides a lot of examples how to use ag2 with Azure, but it's not limited to Azure. It can be used with any other cloud provider or even on-premises. There are instructions for <a href="https://ag2ai.github.io/ag2/docs/topics/non-openai-models/about-using-nonopenai-models/">Non-Open AI Models</a>, <a href="https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-anthropic/">Anthropic Claude</a>, <a href="https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-bedrock/">Amazon Bedrock</a>, <a href="https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-gemini/">Google Gemini</a> as well as <a href="https://ag2ai.github.io/ag2/docs/topics/non-openai-models/local-ollama/">locally ran open source models with ollama</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" lang="en-US">
 <h1 id="thats-right-you-can-run-multi-agent-system-on-your-laptop">That's right, you can run multi agent system on your laptop</h1>
 <p>You can experiment with multi agent system on your laptop.<br />
 You don't need to pay for any external APIs.<br />
 You don't need to pay for any cloud services.<br />
 Some models consume surprisingly low amount of resources (for example gemma2).</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" lang="en-US">
 <h1 id="conversation-patterns---two-agents">Conversation Patterns - Two Agents</h1>
 <p>The simplest conversation pattern in Autogen involves two agents interacting with each other.</p>
 <p>Example: RPG Game</p>
@@ -58,7 +64,10 @@ Some models consume surprisingly low amount of resources (for example gemma2).</
 <li>Configurable maximum conversation turns</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" lang="en-US">
+<p><img src="images/2agents.png" alt="Two Agents Conversation Pattern" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" lang="en-US">
 <p>Code Example:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">player = ConversableAgent(
     name=<span class="hljs-string">&quot;player&quot;</span>,
@@ -78,7 +87,7 @@ chat_result = game_master.initiate_chat(
 )
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" lang="en-US">
 <h1 id="conversation-patterns---sequential-%F0%9F%91%A4%F0%9F%92%AC%E2%9E%A1%EF%B8%8F%F0%9F%93%9D%E2%9E%A1%EF%B8%8F%F0%9F%93%8A%E2%9E%A1%EF%B8%8F%F0%9F%8C%90%E2%9E%A1%EF%B8%8F%F0%9F%91%A4">Conversation Patterns - Sequential <img class="emoji" draggable="false" alt="👤" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f464.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="💬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="📊" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ca.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="🌐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="👤" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f464.svg" data-marp-twemoji=""/></h1>
 <p>In this pattern, the conversation is split into multiple stages, with each stage involving a different agent in a predefined sequence.</p>
 <p>Example: Business Strategy Update</p>
@@ -88,7 +97,10 @@ chat_result = game_master.initiate_chat(
 <li>Domains Agent <img class="emoji" draggable="false" alt="🌐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" data-marp-twemoji=""/> - Explores different business areas</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" lang="en-US">
+<p><img src="images/sequential.png" alt="Sequential Conversation Pattern" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" lang="en-US">
 <h1 id="sequential-pattern-implementation">Sequential Pattern Implementation</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">chats = [
     {
@@ -114,7 +126,7 @@ chat_result = game_master.initiate_chat(
 chat_results = initiate_chats(chats)
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" lang="en-US">
 <h1 id="conversation-patterns---nested-%F0%9F%92%A1%E2%9E%A1%EF%B8%8F%F0%9F%A4%96%E2%9E%A1%EF%B8%8F%F0%9F%91%A8%E2%80%8D%F0%9F%91%A9%E2%80%8D%F0%9F%91%A7%E2%80%8D%F0%9F%91%A6">Conversation Patterns - Nested <img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="🤖" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="👨‍👩‍👧‍👦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f468-200d-1f469-200d-1f467-200d-1f466.svg" data-marp-twemoji=""/></h1>
 <p>In this pattern, the first agent receives a task and then consults with multiple specialized agents in a nested way. The agents form a hierarchical structure, with feedback flowing back up to improve the initial plan.</p>
 <p>Example: Gaming Startup Evaluation</p>
@@ -131,26 +143,20 @@ chat_results = initiate_chats(chats)
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" lang="en-US">
+<p><img src="images/nestedChats.png" alt="Nested Chat Pattern" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" lang="en-US">
 <h1 id="nested-pattern-implementation">Nested Pattern Implementation</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">founder = autogen.AssistantAgent(
-    name=<span class="hljs-string">&quot;Founder&quot;</span>,
-    system_message=<span class="hljs-string">&quot;You are an optimistic founder creating detailed startup plan...&quot;</span>,
-    llm_config=llm_config
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">
+team_lead_analyst.register_nested_chats(
+    review_chats,
+    trigger=founder,
 )
 
-<span class="hljs-comment"># Initial plan creation</span>
-reply = founder.generate_reply(messages=[{
-    <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;Describe idea for gaming startup focused on 8-player couch co-op games...&quot;</span>, 
-    <span class="hljs-string">&quot;role&quot;</span>: <span class="hljs-string">&quot;user&quot;</span>
-}])
-
-<span class="hljs-comment"># Nested feedback collection from expert team</span>
-expert_feedback = gather_expert_feedback(founder_plan)
-final_roadmap = update_plan_with_feedback(expert_feedback)
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" lang="en-US">
 <h1 id="conversation-patterns---group-chat-%F0%9F%91%A4%F0%9F%92%AC%F0%9F%A4%96%F0%9F%92%AC%F0%9F%91%A5">Conversation Patterns - Group Chat <img class="emoji" draggable="false" alt="👤" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f464.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="💬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="🤖" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="💬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="👥" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f465.svg" data-marp-twemoji=""/></h1>
 <p>Most complex pattern where multiple agents interact in a group setting, similar to a Discord channel or team meeting.</p>
 <p>Example: GenAI Meetup Planning</p>
@@ -163,7 +169,10 @@ final_roadmap = update_plan_with_feedback(expert_feedback)
 <li>Janusz <img class="emoji" draggable="false" alt="😈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f608.svg" data-marp-twemoji=""/> - The troublemaker</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" lang="en-US">
+<p><img src="images/groupchat.png" alt="Group Chat Pattern" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" lang="en-US">
 <h1 id="group-chat-implementation-%F0%9F%A4%96%F0%9F%92%AC%F0%9F%91%A5">Group Chat Implementation <img class="emoji" draggable="false" alt="🤖" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="💬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="👥" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f465.svg" data-marp-twemoji=""/></h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">groupchat = autogen.GroupChat(
     agents=[user_proxy, johnnie, janusz, newsman, moderator, ola],
@@ -178,22 +187,27 @@ final_roadmap = update_plan_with_feedback(expert_feedback)
     speaker_transitions_type=<span class="hljs-string">&quot;allowed&quot;</span>,
 )
 
-<span class="hljs-comment"># Different models per agent</span>
-gpt4_config = {...}  <span class="hljs-comment"># Azure OpenAI config</span>
-gemma2_config = {    <span class="hljs-comment"># Local Ollama config</span>
-    <span class="hljs-string">&quot;model&quot;</span>: <span class="hljs-string">&quot;gemma2&quot;</span>,
-    <span class="hljs-string">&quot;base_url&quot;</span>: <span class="hljs-string">&quot;http://localhost:11434/v1&quot;</span>,
-    <span class="hljs-string">&quot;api_key&quot;</span>: <span class="hljs-string">&quot;ollama&quot;</span>  
-}
+manager = autogen.GroupChatManager(
+    groupchat=groupchat, llm_config=gpt_4o_mini_config
+)
+
+groupchat_result = user_proxy.initiate_chat(
+    manager,
+    message=task,
+)
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" lang="en-US">
+<h1 id="autogen-studio">Autogen Studio</h1>
+<p>It's low code environment to create autogen workflows.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" lang="en-US">
 <h1 id="qr-code-to-repo-used-during-live-coding">QR Code to repo used during live coding</h1>
 <div>
   <img src="images/qr-repo.svg" width="400" height="400" alt="QR Code to repository" />
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" lang="en-US">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" lang="en-US">
 <h1 id="follow-us-on-linkedin">Follow us on LinkedIn</h1>
 <div>
   <img src="images/qr-linkedin.svg" width="400" height="400" alt="QR Code to repository" />

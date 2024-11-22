@@ -4,21 +4,30 @@ marp: true
 
 # What is autogen and ag2?
 
-It's framework to build autonomus multi agent systems.
+It's framework to build autonomous multi agent systems.
 
 ---
 
 # Autogen and ag2
 
-Autogen statred as open source project by microsoft, hosted as [microsoft/autogen](https://github.com/microsoft/autogen) but now Autogen2 is separate organization called [ag2](https://github.com/ag2ai/ag2). Python package is pyauthogen or simply ag2.
+Autogen started as open source project by microsoft, hosted as [microsoft/autogen](https://github.com/microsoft/autogen) but now Autogen2 is a separate organization called [ag2ai](https://github.com/ag2ai/ag2). Python packages are called pyauthogen (for autogen 0.2-0.4) or ag2 (new ag2).
+
+---
+
+# What makes ag2 stand out compared to other multi agent frameworks?
+
+Compared to Prompt Flow AutoGen emphasizes Agents communicate by sending and receiving messages, enabling intricate interactions.
+PromptFlow is designed [link LLMs, prompts, Python code and other tools together in a executable workflow](https://microsoft.github.io/promptflow/)
+
+LangChain is focused on component Chaining: Focuses on building applications by chaining together components like prompts, LLMs, and tools.
 
 ---
 
 # Some of coolest features
 
-- **Conversation Patterns**: Autogen provides a set of conversation patterns that can be used to model the interactions between agents. It's main topic of today's presentation.
+- **Conversation Patterns**: Autogen provides a set of conversation patterns that can be used to model the interactions between agents. It's the main topic of today's presentation.
 
-- **Code executors**: Autogen agents can both call only pre-defined registered functions, or just write the code and execute it. It's very powerful but risky feature.
+- **Code executors**: Autogen agents can either call only pre-defined registered functions, or just write the code and execute it. It's very powerful but risky feature.
 
 - **Human in the loop**: User can be part of the conversation, and can be asked to provide some information or make a decision.
 
@@ -26,17 +35,17 @@ Autogen statred as open source project by microsoft, hosted as [microsoft/autoge
 
 # Multi agent and multimodel
 
-Autogen was started in Microsoft, but it's open source.
+Autogen was started in Microsoft, as open source project.
 Documentation of ag2 provides a lot of examples how to use ag2 with Azure, but it's not limited to Azure. It can be used with any other cloud provider or even on-premises. There are instructions for [Non-Open AI Models](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/about-using-nonopenai-models/), [Anthropic Claude](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-anthropic/), [Amazon Bedrock](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-bedrock/), [Google Gemini](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-gemini/) as well as [locally ran open source models with ollama](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/local-ollama/) 
 
 ---
 
 # That's right, you can run multi agent system on your laptop
 
-You can experiment with multi agent system on your laptop.
-You don't need to pay for any external APIs.
-You don't need to pay for any cloud services.
-Some models consume surprisingly low amount of resources (for example gemma2).
+- You can experiment with multi agent system on your laptop.
+- You don't need to pay for any external APIs.
+- You don't need to pay for any cloud services.
+- Some models consume surprisingly low amount of resources (for example gemma2).
 
 ---
 
@@ -45,14 +54,18 @@ Some models consume surprisingly low amount of resources (for example gemma2).
 The simplest conversation pattern in Autogen involves two agents interacting with each other. 
 
 Example: RPG Game
-- Game Master 🎲 - leads story, creates world and monsters
-- Player Character 🤺 - plays as orc barbarian with big stone axe
+- Game Master 🎲 - leads the story, creates world and monsters
+- Player Character 🤺 - plays as orc barbarian with a big stone axe
 
 Key Features:
 - Each agent has defined role (system_message)
 - Memory retention between interactions  
 - Turn-based conversation flow
 - Configurable maximum conversation turns
+
+---
+
+![Two Agents Conversation Pattern](images/2agents.png)
 
 ---
 
@@ -85,6 +98,10 @@ Example: Business Strategy Update
 - Everyday Assistant 📝 - Gathers basic company info, asks about status
 - Strategy Agent 📊 - Reviews business plans & OKRs 
 - Domains Agent 🌐 - Explores different business areas
+
+---
+
+![Sequential Conversation Pattern](images/sequential.png)
 
 ---
 
@@ -130,25 +147,19 @@ Example: Gaming Startup Evaluation
   - Chief Editor 💻
 
 ---
+![Nested Chat Pattern](images/nestedChats.png)
+
+---
 
 # Nested Pattern Implementation
 
 ```python
-founder = autogen.AssistantAgent(
-    name="Founder",
-    system_message="You are an optimistic founder creating detailed startup plan...",
-    llm_config=llm_config
+
+team_lead_analyst.register_nested_chats(
+    review_chats,
+    trigger=founder,
 )
 
-# Initial plan creation
-reply = founder.generate_reply(messages=[{
-    "content": "Describe idea for gaming startup focused on 8-player couch co-op games...", 
-    "role": "user"
-}])
-
-# Nested feedback collection from expert team
-expert_feedback = gather_expert_feedback(founder_plan)
-final_roadmap = update_plan_with_feedback(expert_feedback)
 ```
 
 ---
@@ -160,13 +171,16 @@ Most complex pattern where multiple agents interact in a group setting, similar 
 Example: GenAI Meetup Planning
 - Admin 👤 - Chat owner, can ban members
 - Moderator 🛡️ - Keeps discussion on topic
-- Newsman 📰 - Fetches latest AI news
+- Newsman 📰 - Fetches the latest AI news
 - Johnnie 🤖 - AI enthusiast
 - Ola 🔬 - RAG specialist
 - Janusz 😈 - The troublemaker
 
 ---
 
+![Group Chat Pattern](images/groupchat.png)
+
+---
 # Group Chat Implementation 🤖💬👥
 
 ```python
@@ -183,15 +197,22 @@ groupchat = autogen.GroupChat(
     speaker_transitions_type="allowed",
 )
 
-# Different models per agent
-gpt4_config = {...}  # Azure OpenAI config
-gemma2_config = {    # Local Ollama config
-    "model": "gemma2",
-    "base_url": "http://localhost:11434/v1",
-    "api_key": "ollama"  
-}
+manager = autogen.GroupChatManager(
+    groupchat=groupchat, llm_config=gpt_4o_mini_config
+)
+
+groupchat_result = user_proxy.initiate_chat(
+    manager,
+    message=task,
+)
 ```
 ---
+# Autogen Studio
+
+It's low code environment to create autogen workflows.
+
+---
+
 
 # QR Code to repo used during live coding
 
