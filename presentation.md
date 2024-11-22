@@ -147,7 +147,7 @@ Example: Gaming Startup Evaluation
   - Chief Editor 💻
 
 ---
-![Nested Chat Pattern](images/nestedChats.png)
+![bg contain](images/nestedChats.png)
 
 ---
 
@@ -177,8 +177,7 @@ Example: GenAI Meetup Planning
 - Janusz 😈 - The troublemaker
 
 ---
-
-![Group Chat Pattern](images/groupchat.png)
+![bg contain](images/groupchat.png)
 
 ---
 # Group Chat Implementation 🤖💬👥
