@@ -212,7 +212,7 @@ review_chats = [
         "{'reviewer': '', 'review': ''}",},
      "max_turns": 1},
      {"recipient": chief_editor, 
-      "message": "Aggregrate feedback from all reviewers and give final suggestions on the roadmap.", 
+      "message": "Aggregate feedback from all reviewers and give final suggestions on the roadmap.", 
      "max_turns": 1},
 ]
 
