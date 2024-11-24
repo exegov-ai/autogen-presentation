@@ -8,18 +8,30 @@ It's framework to build autonomous multi agent systems.
 
 ---
 
-# Autogen and ag2
+# Autogen and it's forks
 
-Autogen started as open source project by microsoft, hosted as [microsoft/autogen](https://github.com/microsoft/autogen) but now Autogen2 is a separate organization called [ag2ai](https://github.com/ag2ai/ag2). Python packages are called pyauthogen (for autogen 0.2-0.4) or ag2 (new ag2).
+Autogen started as open source project by microsoft, hosted as [microsoft/autogen](https://github.com/microsoft/autogen). 
+Autogen 2 is fork created by initial authors as separate organization called [ag2ai](https://github.com/ag2ai/ag2). 
+
+---
+
+# Currently there are 5 autogen related PyPi Packages
+- [ag2ai inherited](https://www.linkedin.com/posts/chi-wang-autogen_github-ag2aiag2-ag2-formerly-autogen-activity-7262922853312802818-WHp7/?utm_source=share&utm_medium=member_android) packages `autogen`, `pyautogen` and added new alias  `ag2` all pointing to the same code base.
+- ag2ai's Autogen 2 0.4 was released recently 
+- Legacy MS autogen package is `autogen-agentchat~=0.2` [maintained as branch of original repo](https://github.com/microsoft/autogen/tree/0.2)
+- [New MS Autogen 0.4 is not backwards](https://microsoft.github.io/autogen/0.2/blog/2024/10/02/new-autogen-architecture-preview/) compatible with 0.2 is available as `autogen-core` and `autogen-agentchat==0.4.0.dev6`
+- Microsoft plans to merge MS autogen 0.4 with [semantic kernel](https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/)
 
 ---
 
 # What makes ag2 stand out compared to other multi agent frameworks?
 
 Compared to Prompt Flow AutoGen emphasizes Agents communicate by sending and receiving messages, enabling intricate interactions.
-PromptFlow is designed [link LLMs, prompts, Python code and other tools together in a executable workflow](https://microsoft.github.io/promptflow/)
+**PromptFlow** is designed to [link LLMs, prompts, Python code and other tools together in a executable workflow](https://microsoft.github.io/promptflow/)
 
-LangChain is focused on component Chaining: Focuses on building applications by chaining together components like prompts, LLMs, and tools.
+**LangChain** is focused on component Chaining: building applications by connecting together components like prompts, LLMs, and tools. It creates structured chains with deterministic logic and branching. 
+
+**Autogen** gives agents more autonomy, within pre-defined conversation patterns.
 
 ---
 
@@ -33,9 +45,8 @@ LangChain is focused on component Chaining: Focuses on building applications by 
 
 ---
 
-# Multi agent and multimodel
+# Multi-agent and multi-model
 
-Autogen was started in Microsoft, as open source project.
 Documentation of ag2 provides a lot of examples how to use ag2 with Azure, but it's not limited to Azure. It can be used with any other cloud provider or even on-premises. There are instructions for [Non-Open AI Models](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/about-using-nonopenai-models/), [Anthropic Claude](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-anthropic/), [Amazon Bedrock](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-bedrock/), [Google Gemini](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/cloud-gemini/) as well as [locally ran open source models with ollama](https://ag2ai.github.io/ag2/docs/topics/non-openai-models/local-ollama/) 
 
 ---
@@ -209,7 +220,8 @@ groupchat_result = user_proxy.initiate_chat(
 # Autogen Studio
 
 It's low code environment to create autogen workflows.
-
+- [Autogen Studio is part of MS Autogen ecosystem](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-studio)
+- [ag2ai team has creating new ui for ag2 on their roadmap](https://github.com/ag2ai/ag2/issues/29)
 ---
 
 
